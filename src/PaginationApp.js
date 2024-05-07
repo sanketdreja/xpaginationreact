@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 function PaginationApp() {
   // State to manage fetched data, current page, and items per page
@@ -10,16 +10,14 @@ function PaginationApp() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(
-          "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
-        );
+        const response = await fetch('https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json');
         if (!response.ok) {
-          throw new Error("failed to fetch data");
+          throw new Error('failed to fetch data');
         }
         const data = await response.json();
         setData(data);
       } catch (error) {
-        alert("failed to fetch data");
+        alert('failed to fetch data');
       }
     }
     fetchData();
@@ -66,9 +64,13 @@ function PaginationApp() {
         </tbody>
       </table>
       <div>
-        <button onClick={handlePreviousPage}>Previous</button>
-        <h1>{currentPage}</h1>
-        <button onClick={handleNextPage}>Next</button>
+        <button onClick={handlePreviousPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <span>Page {currentPage} of {totalPages}</span>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
     </div>
   );
