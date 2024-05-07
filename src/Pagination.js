@@ -6,9 +6,7 @@ function Pagination({ currentPage, totalPages, onNext, onPrevious }) {
       <button onClick={onPrevious} disabled={currentPage === 1}>
         Previous
       </button>
-      <span>
-        Page {currentPage} of {totalPages}
-      </span>
+      <span>{currentPage}</span>
       <button onClick={onNext} disabled={currentPage === totalPages}>
         Next
       </button>
