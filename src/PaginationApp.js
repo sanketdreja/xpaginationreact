@@ -65,13 +65,13 @@ function PaginationApp() {
           ))}
         </tbody>
       </table>
+      {/* <div> */}
+      <button onClick={handlePreviousPage}>Previous</button>
       <div>
-        <button onClick={handlePreviousPage}>Previous</button>
-        <span>
-          {currentPage}
-        </span>
-        <button onClick={handleNextPage}>Next</button>
+        <h2>{currentPage}</h2>
       </div>
+      <button onClick={handleNextPage}>Next</button>
+      {/* </div> */}
     </div>
   );
 }
