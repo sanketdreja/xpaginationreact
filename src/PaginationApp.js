@@ -68,7 +68,7 @@ function PaginationApp() {
       <div>
         <button onClick={handlePreviousPage}>Previous</button>
         <span>
-          Page {currentPage} of {totalPages}
+          {currentPage}
         </span>
         <button onClick={handleNextPage}>Next</button>
       </div>
