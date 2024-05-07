@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 function PaginationApp() {
   // State to manage fetched data, current page, and items per page
   const [data, setData] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(2);
   const itemsPerPage = 10;
 
   // Fetch data from the API
