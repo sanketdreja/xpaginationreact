@@ -67,7 +67,9 @@ function PaginationApp() {
       </table>
       <div>
         <button onClick={handlePreviousPage}>Previous</button>
-        <span> {currentPage} </span>
+        <div>
+          <span>{currentPage}</span>
+        </div>
         <button onClick={handleNextPage}>Next</button>
       </div>
     </div>
